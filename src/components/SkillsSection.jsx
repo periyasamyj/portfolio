@@ -4,23 +4,24 @@ import { cn } from "@/lib/utils";
 const skills = [
   // Frontend
   { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
+  { name: "JavaScript", level: 80, category: "frontend" },
   { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: "Tailwind CSS", level: 60, category: "frontend" },
 
   // Backend
   { name: "Node.js", level: 80, category: "backend" },
   { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  { name: "Python-flask", level: 75, category: "backend" },
+  { name: "Java-jsp", level: 75, category: "backend" },
+
+  { name: "MongoDB", level: 90, category: "backend" },
+  { name: "MYSQL", level: 85, category: "backend" },
 
   // Tools
   { name: "Git/GitHub", level: 90, category: "tools" },
+  { name: "AWS", level: 75, category: "tools" },
   { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
+  { name: "linux", level: 75, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
 ];
 
@@ -39,7 +40,7 @@ export const SkillsSection = () => {
           My <span className="text-primary"> Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 ">
           {categories.map((category, key) => (
             <button
               key={key}
@@ -56,14 +57,15 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-blue-800/9 p-6 rounded-lg shadow-xs card-hover"
             >
-              <div className="text-left mb-4">
+              <div className="text-left mb-4 ">
                 <h3 className="font-semibold text-lg"> {skill.name}</h3>
+                
               </div>
               <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
                 <div
